@@ -39,6 +39,7 @@ class Program
         {
             Console.WriteLine("You failed the class better luck next time.");
         }
+        Console.WriteLine($"Your grade is: {letter}");
 
     }
 }
