@@ -6,7 +6,12 @@ class Program
     {
         int x = 10;
 
-        if (x == 0)
+        int z = 30;
+
+        int y = 20;
+
+
+        if (x == 10 ||  y == 20 && z== 30)
         {
          Console.WriteLine("X is 10");
          Console.WriteLine("Y is fun");
