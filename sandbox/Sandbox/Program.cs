@@ -4,6 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Cheesecake");
+        int x = 10;
+
+        if (x == 0)
+        {
+         Console.WriteLine("X equals 10");
+         Console.WriteLine("Y is fun");
+        }
+
     }
 }
