@@ -4,14 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-       bool done;
-       do
+    
+       List <string> myfriends = ["Bob", "Betty", "Bubba"]; 
+       myfriends.Add("James");
+       myfriends.Add("Doug");
+
+       foreach(string name in myfriends)
         {
-         Console.Write("Are we done yet? Y/N ");
-         done = Console.ReadLine().ToLower() == "y";
-
-
-        }while(!done);
-
+            Console.WriteLine(name);
+        }
     }
 }
