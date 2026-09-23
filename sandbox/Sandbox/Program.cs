@@ -13,5 +13,11 @@ class Program
         {
             Console.WriteLine(name);
         }
+
+        
+        static double Addnumbers(double x, int y)
+        {
+            return x+y;
+        }
     }
 }
