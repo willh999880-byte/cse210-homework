@@ -4,11 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-       bool done = false;
-       while( ! done)
+       bool done;
+       do
         {
-            Console.Write("Are we done yet? y/n ");
-            done = Console.ReadLine().ToLower() == "y";
-        }
+         Console.Write("Are we done yet? Y/N ");
+         done = Console.ReadLine().ToLower() == "y";
+
+
+        }while(!done);
+
     }
 }
