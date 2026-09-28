@@ -4,10 +4,7 @@ using System.Reflection.Metadata;
 class Program
 {
 
-     static void Displaygreeting(string name)
-        {
-            Console.WriteLine($"Welcome {name}, Pleased to meet you");
-        }
+    
     static void Main(string[] args)
     {
     
