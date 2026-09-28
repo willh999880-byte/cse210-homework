@@ -3,8 +3,6 @@ using System.Reflection.Metadata;
 
 class Program
 {
-
-    
     static void Main(string[] args)
     {
     
@@ -22,7 +20,10 @@ class Program
         {
             return x+y;
         }
-       
+        static void Displaygreeting(string name)
+        {
+            Console.WriteLine($"Welcome {name}, Pleased to meet you");
+        }
         
         Displaygreeting("Bob");
 
