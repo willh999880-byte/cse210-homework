@@ -1,6 +1,6 @@
 ﻿class Program
 {
-    static void main()
+    static void Main()
  {
     Console.WriteLine("Hello Circle");
 
