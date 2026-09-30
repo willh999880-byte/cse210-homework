@@ -8,7 +8,7 @@
 
  public void job_display()
     {
-        Console.WriteLine($"{_job_Title} {_start_Year} - {_end_Year}");
+        Console.WriteLine($"{_job_Title} {_company} {_start_Year} - {_end_Year}");
     }
 }
 
