@@ -23,6 +23,7 @@ class Program
         Resume myresume = new Resume();
         myresume._jobs.Add(job1); 
         myresume._jobs.Add(job2);
+        Console.WriteLine(myresume._jobs[0]._job_Title);
         
     }
 }
