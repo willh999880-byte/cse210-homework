@@ -18,7 +18,7 @@ class Program
         job2._end_Year = 1971;
 
 
-        job1.job_display();
-        job2.job_display();
+        job1.Job_Display();
+        job2.Job_Display();
     }
 }
