@@ -33,7 +33,7 @@ class Program
              total = number + total ;
         } 
          int total_numbers_in_list = numbers.Count;
-         float average_of_list = (total/total_numbers_in_list);
+         float average_of_list = ((float)total/total_numbers_in_list);
         Console.WriteLine($"Sum: {total}");
         Console.WriteLine($"Average: {average_of_list}");
         Console.WriteLine($"The largest number is: {biggest_number}");
