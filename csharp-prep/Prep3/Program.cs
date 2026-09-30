@@ -4,14 +4,17 @@ class Program
 {
     static void Main(string[] args)
     {
-     Console.WriteLine("What is the magic number: ");
+        
+     Console.WriteLine("What is the magic number? ");
      int real_magic_number = int.Parse(Console.ReadLine());
      Console.WriteLine("What is your guess? ");
      int user_guess = int.Parse(Console.ReadLine());
-
-     if (real_magic_number == user_guess) 
-     {
-      Console.WriteLine("Correct you guessed the magic number!");      
+    while (real_magic_number != user_guess)
+    {
+       user_guess = int.Parse(Console.ReadLine());
+         if (real_magic_number == user_guess) 
+        {
+      Console.WriteLine("You guessed it!");      
      }
      else if (real_magic_number > user_guess)
         {
@@ -25,5 +28,5 @@ class Program
         {
             Console.WriteLine("Unknown input. Please try again");
         }   
-    }
+    }}
 }
