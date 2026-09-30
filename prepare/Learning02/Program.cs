@@ -1,5 +1,5 @@
 using System;
-using System.Threading.Tasks.Dataflow;
+
 
 class Program
 {
@@ -21,9 +21,12 @@ class Program
         job1.Job_Display();
         job2.Job_Display();
         Resume myresume = new Resume();
+        myresume._name = "Will Hazelton";
         myresume._jobs.Add(job1); 
         myresume._jobs.Add(job2);
-        Console.WriteLine(myresume._jobs[0]._job_Title);
+        myresume.Display();
+
+        
         
     }
 }
