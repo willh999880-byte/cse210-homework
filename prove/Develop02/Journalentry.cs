@@ -13,7 +13,8 @@ class JournalEntry
 
     public void CreateJournalEntry()
     {
-        _date = "October";
+        DateTime thecurrenttime = DateTime.Now;
+        _date = thecurrenttime.ToShortDateString();
         _prompt = "How was you day?";
         Console.Write($"{_prompt}"); //.Write command Leaves the cursor next to the line
         _response = Console.ReadLine(); //Reads everything you wrote to the line
