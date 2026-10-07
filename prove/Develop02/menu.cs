@@ -20,6 +20,6 @@ class Menu
         
         }
 
-        return 1; 
+        return response; 
     }
 }
