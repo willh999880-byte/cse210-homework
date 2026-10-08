@@ -16,6 +16,7 @@ class Journal
     }
     public void SaveJournal()
     {
+        Console.Write("Please enter the file where you want to save your journal: ");
         string filename = Console.ReadLine();
 
         using (StreamWriter outputfile = new StreamWriter(filename))
@@ -33,6 +34,7 @@ class Journal
     }
     public void LoadJournal()
     {
+        Console.Write("Please enter the file where you have your journal: ");
         string filename = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines(filename);
 
