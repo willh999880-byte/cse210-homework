@@ -18,11 +18,11 @@ class Program
             {
                 case 1:
                   Console.WriteLine("create");
-                  NewEntry.CreateJournalEntry();
+                  Save_Load_display_journal.CreateEntry();
                    break;
                 case 2: 
                   Console.WriteLine("Display");
-                  NewEntry.DisplayEntry();
+                  Save_Load_display_journal.DisplayJournal();
                     break;
                 case 3:
                   Console.WriteLine("Save");
