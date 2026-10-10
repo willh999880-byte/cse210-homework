@@ -1,18 +1,18 @@
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 class Journal
 
 {
 
      
-    public List<JournalEntry> _entries = new List<JournalEntry>();
-    
+    public List<JournalEntry> entries = new List<JournalEntry>();
+     
     
     public void DisplayJournal()
     {
         
 
-    foreach ( JournalEntry entry in _entries)
+    foreach ( JournalEntry entry in entries)
     {
         entry.DisplayEntry();
     }
@@ -21,29 +21,34 @@ class Journal
 
     public void CreateEntry()
     {
+        
         JournalEntry newEntry = new JournalEntry();
         newEntry.CreateJournalEntry();
-        _entries.Add(newEntry);
+        entries.Add(newEntry);
 
     }
     public void SaveJournal()
     {
         Console.Write("Please enter the file where you want to save your journal: ");
+        
         string filename = Console.ReadLine();
-
+        Console.WriteLine(Path.GetFullPath(filename));
         using (StreamWriter outputfile = new StreamWriter(filename))
 
         {
-            outputfile.WriteLine();
+        
 
-            foreach (JournalEntry entry in _entries)
+            foreach (JournalEntry entry in entries)
             {
-                outputfile.WriteLine(entry);
+                Console.WriteLine("File opened");
+                outputfile.WriteLine($"entry");
             }
 
             
         }
+        Console.WriteLine("File Closed");
     }
+
     public void LoadJournal()
     {
         Console.Write("Please enter the file where you have your journal: ");
