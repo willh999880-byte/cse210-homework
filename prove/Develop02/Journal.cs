@@ -1,18 +1,20 @@
-using System.IO;
+using System;
+using System.IO; 
 using System.Collections.Generic;
+
 class Journal
 
 {
 
      
-    public List<JournalEntry> entries = new List<JournalEntry>();
+    public List<JournalEntry> _entries = new List<JournalEntry>();
      
     
     public void DisplayJournal()
     {
         
 
-    foreach ( JournalEntry entry in entries)
+    foreach ( JournalEntry entry in _entries)
     {
         entry.DisplayEntry();
     }
@@ -24,7 +26,7 @@ class Journal
         
         JournalEntry newEntry = new JournalEntry();
         newEntry.CreateJournalEntry();
-        entries.Add(newEntry);
+        _entries.Add(newEntry);
 
     }
     public void SaveJournal()
@@ -32,21 +34,19 @@ class Journal
         Console.Write("Please enter the file where you want to save your journal: ");
         
         string filename = Console.ReadLine();
-        Console.WriteLine(Path.GetFullPath(filename));
+        
         using (StreamWriter outputfile = new StreamWriter(filename))
 
         {
         
-
-            foreach (JournalEntry entry in entries)
+            foreach (JournalEntry entry in _entries)
             {
-                Console.WriteLine("File opened");
-                outputfile.WriteLine($"entry");
+                outputfile.WriteLine(entry);
             }
 
             
         }
-        Console.WriteLine("File Closed");
+        
     }
 
     public void LoadJournal()

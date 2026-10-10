@@ -8,8 +8,7 @@ class JournalEntry
 
     public void DisplayEntry()
     {
-        Console.WriteLine($"{_date}. ");
-        Console.WriteLine($"{_prompt}. ");
+        Console.WriteLine($"{_date},{_prompt}");
         Console.WriteLine($"{_response}. ");//.Writeline command leaves the cursor on the newline/next line
     }
 
@@ -24,9 +23,9 @@ class JournalEntry
         };
 
         DateTime thecurrenttime = DateTime.Now;
-        _date = thecurrenttime.ToShortDateString();
-        _prompt = prompts[0];
-         
+        _date = thecurrenttime.ToString();
+        _prompt = prompts[Random.Shared.Next(prompts.Length)];
+        
         Console.Write($"{_prompt}"); //.Write command Leaves the cursor next to the line
         _response = Console.ReadLine(); //Reads everything you wrote to the line
     }
