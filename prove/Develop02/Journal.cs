@@ -7,6 +7,7 @@ class Journal
      
     List<JournalEntry> _entries = new List<JournalEntry>();
     
+    
     public void DisplayJournal()
     {
         
