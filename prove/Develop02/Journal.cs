@@ -5,7 +5,7 @@ class Journal
 {
 
      
-    List<JournalEntry> _entries = new List<JournalEntry>();
+    public List<JournalEntry> _entries = new List<JournalEntry>();
     
     
     public void DisplayJournal()
@@ -15,9 +15,16 @@ class Journal
     foreach ( JournalEntry entry in _entries)
     {
         entry.DisplayEntry();
-        
-        
     }
+    }
+
+
+    public void CreateEntry()
+    {
+        JournalEntry newEntry = new JournalEntry();
+        newEntry.CreateJournalEntry();
+        _entries.Add(newEntry);
+
     }
     public void SaveJournal()
     {
