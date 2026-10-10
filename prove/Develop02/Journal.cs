@@ -1,9 +1,11 @@
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 class Journal
 
 {
-    public List<JournalEntry>  _entries;
 
+     
+    List<JournalEntry> _entries = new List<JournalEntry>();
     
     public void DisplayJournal()
     {
@@ -12,6 +14,8 @@ class Journal
     foreach ( JournalEntry entry in _entries)
     {
         entry.DisplayEntry();
+        
+        
     }
     }
     public void SaveJournal()
@@ -41,8 +45,8 @@ class Journal
         foreach (string line in lines)
         {
             string[] parts = line.Split("|");
-            string date = parts[0];
-            string entry = parts[1];
+            string entry = parts[0];
+            Console.WriteLine($"{entry}");
         }
     }
 }

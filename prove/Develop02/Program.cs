@@ -6,6 +6,7 @@ class Program
     {
         Menu myMenu = new Menu();
         JournalEntry NewEntry = new JournalEntry(); 
+        Journal Save_Load_display_journal = new Journal();
 
          int response = 0;
          
@@ -25,9 +26,11 @@ class Program
                     break;
                 case 3:
                   Console.WriteLine("Save");
+                  Save_Load_display_journal.SaveJournal();
                     break;
                 case 4:
                   Console.WriteLine("Write");
+                  Save_Load_display_journal.LoadJournal();
                     break;
 
             }
