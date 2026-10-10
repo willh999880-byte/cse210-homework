@@ -29,11 +29,10 @@ class Journal
         _entries.Add(newEntry);
 
     }
-    public void SaveJournal()
+    
+    public void SaveJournal(string filename)
     {
         Console.Write("Please enter the file where you want to save your journal: ");
-        
-        string filename = Console.ReadLine();
         
         using (StreamWriter outputfile = new StreamWriter(filename))
 
@@ -41,7 +40,7 @@ class Journal
         
             foreach (JournalEntry entry in _entries)
             {
-                outputfile.WriteLine(entry);
+                outputfile.WriteLine(entry.CreateSystemString());
             }
 
             
@@ -49,17 +48,22 @@ class Journal
         
     }
 
-    public void LoadJournal()
+    public void LoadJournal(string filename)
     {
-        Console.Write("Please enter the file where you have your journal: ");
-        string filename = Console.ReadLine();
+        
         string[] lines = System.IO.File.ReadAllLines(filename);
-
+        
         foreach (string line in lines)
         {
             string[] parts = line.Split("|");
-            string entry = parts[0];
-            Console.WriteLine($"{entry}");
+            string date = parts[0];
+            string prompt = parts[1];
+            string response = parts[2];
+            
+           
         }
+
     }
+
+
 }

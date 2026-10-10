@@ -1,5 +1,6 @@
 using System;
-
+using System.IO; 
+using System.Collections.Generic;
 class Program
 {
     static void Main(string[] args)
@@ -26,11 +27,15 @@ class Program
                     break;
                 case 3:
                   Console.WriteLine("Save");
-                  Save_Load_display_journal.SaveJournal();
+                  Console.WriteLine("Please enter the file you would like to save to:");
+                  string filename = Console.ReadLine();
+                  Save_Load_display_journal.SaveJournal(filename);
                     break;
                 case 4:
-                  Console.WriteLine("Write");
-                  Save_Load_display_journal.LoadJournal();
+                  Console.WriteLine("Load");
+                  Console.WriteLine("Please enter the file you would like to save to:");
+                  filename = Console.ReadLine();
+                  Save_Load_display_journal.LoadJournal(filename);
                     break;
 
             }

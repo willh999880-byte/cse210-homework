@@ -25,9 +25,16 @@ class JournalEntry
         DateTime thecurrenttime = DateTime.Now;
         _date = thecurrenttime.ToString();
         _prompt = prompts[Random.Shared.Next(prompts.Length)];
-        
+
         Console.Write($"{_prompt}"); //.Write command Leaves the cursor next to the line
         _response = Console.ReadLine(); //Reads everything you wrote to the line
     }
 
+    public string CreateSystemString()
+    {
+        string outputstring = "";
+
+        outputstring = ($"{_date}|{_prompt}|{_response}");
+        return outputstring;
+    }
 }
