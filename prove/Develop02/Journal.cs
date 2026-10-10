@@ -59,7 +59,8 @@ class Journal
             string date = parts[0];
             string prompt = parts[1];
             string response = parts[2];
-            
+            Console.WriteLine($"{date}, {prompt}");
+            Console.WriteLine($"{response}");
            
         }
 

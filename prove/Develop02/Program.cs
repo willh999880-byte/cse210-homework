@@ -29,7 +29,7 @@ class Program
                   Console.WriteLine("Save");
                   Console.WriteLine("Please enter the file you would like to save to:");
                   string filename = Console.ReadLine();
-                  Save_Load_display_journal.SaveJournal(filename);
+                  
                     break;
                 case 4:
                   Console.WriteLine("Load");
