@@ -32,12 +32,12 @@ class Journal
     
     public void SaveJournal(string filename)
     {
-        Console.Write("Please enter the file where you want to save your journal: ");
+        
         
         using (StreamWriter outputfile = new StreamWriter(filename))
 
         {
-        
+         
             foreach (JournalEntry entry in _entries)
             {
                 outputfile.WriteLine(entry.CreateSystemString());
