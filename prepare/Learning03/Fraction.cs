@@ -1,6 +1,6 @@
 using System.Dynamic;
 using System.IO.Pipes;
-
+using System;
 public class Fraction
 {
     private int _top;
@@ -56,13 +56,13 @@ public class Fraction
         
     }
 
-    public string GetFractionString(string Fraction)
+    public string GetFractionString()
     { 
         string new_fraction = $"{_top}/{_bottom}";
         return new_fraction;
     }
 
-    public double GetDecimalValue(double Decimal)
+    public double GetDecimalValue()
     {
         double decimal_answer = (double)_top/(double)_bottom;
         return decimal_answer;
