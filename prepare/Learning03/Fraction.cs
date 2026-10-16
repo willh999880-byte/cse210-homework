@@ -20,19 +20,19 @@ public class Fraction
     public Fraction(int top, int bottom)
     {  
         _top = top;
-        _bottom = bottom;
+        SetBottom(bottom);
     }
     public int GetTop()
     {
         return _top;
     }
 
-    public int SetTop(int top)
+    public void SetTop(int top)
     {
          _top = top;
         
         
-        return _top;
+        
     }
 
     public int GetBottom()
@@ -40,20 +40,32 @@ public class Fraction
         return _bottom;
     }
 
-    public int SetBottom(int bottom)
+    public void SetBottom(int bottom)
     {
         
             if (bottom > 0)
             {
                _bottom = bottom;
-               return _bottom;
+                
             }
             else
             {
                 _bottom = 1;
-                return _bottom;
+                
             }
         
+    }
+
+    public string GetFractionString(string Fraction)
+    { 
+        string new_fraction = $"{_top}/{_bottom}";
+        return new_fraction;
+    }
+
+    public double GetDecimalValue(double Decimal)
+    {
+        double decimal_answer = (double)_top/(double)_bottom;
+        return decimal_answer;
     }
     
     
