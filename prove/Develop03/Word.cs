@@ -23,11 +23,21 @@ class Word
 
     public void Display()
     {
-        Console.Write($"{_word} ");
+        Console.Write($"{Get_Word_String()} ");
     }
     
     public string Get_Word_String()
     {
-        return _word;
+        string returnstring = "";
+        if (_hidden)
+            for (int i = 0; i < _word.Length; i++)
+            {
+                returnstring += ("_");
+            }
+        else
+        {
+            returnstring = _word;
+        }
+        return returnstring;
     }
 }

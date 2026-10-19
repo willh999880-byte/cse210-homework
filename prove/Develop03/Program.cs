@@ -6,5 +6,8 @@ class Program
     {
         Word myword = new Word("Bubba");
         myword.Display();
+        myword.Hide();
+        Console.WriteLine();
+        myword.Display();
     }
 }
