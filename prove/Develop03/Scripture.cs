@@ -36,4 +36,13 @@ class Scripture
         }
         return tempwords;
     }
+
+
+    public void ShowScripture()
+    {
+        foreach(Word word in _words)
+        {
+            word.Display();
+        }
+    }
 }
