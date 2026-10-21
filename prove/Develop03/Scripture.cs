@@ -3,11 +3,11 @@ using System.Timers;
 class Scripture
 {
     List<Word> _words;
-    //TODO Add scripture reference
+    Reference _Scripturereference;
 
     public Scripture(string Book_Name, int chapter, int verse, string text)
     {
-        //TODO add scripture reference here use bookname, chapter, and verse to create scripture reference
+        _Scripturereference = new Reference(Book_Name, chapter, verse);
         _words = ConvertToWords(text);
 
     }
