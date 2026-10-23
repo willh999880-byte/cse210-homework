@@ -20,6 +20,13 @@ class Reference
 
     public void DisplayReference()
     {
+        if(_Verse.Length == 1)
+        {    
         Console.WriteLine($"{_Book} {_Chapter}: {_Verse}");
+        }
+        else
+        {
+            Console.WriteLine($"{_Book} {_Chapter}: {_Verse[0]}-{_Verse[_Verse.Length-1]}");
+        }
     }
 }
