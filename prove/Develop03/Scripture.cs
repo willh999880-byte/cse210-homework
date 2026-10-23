@@ -5,7 +5,7 @@ class Scripture
     List<Word> _words;
     Reference _Scripturereference;
 
-    public Scripture(string Book_Name, int chapter, int verse, string text)
+    public Scripture(string Book_Name, int chapter, int[] verse, string text)
     {
         _Scripturereference = new Reference(Book_Name, chapter, verse);
         _words = ConvertToWords(text);
@@ -40,6 +40,7 @@ class Scripture
 
     public void ShowScripture()
     {
+        _Scripturereference.DisplayReference();
         foreach(Word word in _words)
         {
             word.Display();
