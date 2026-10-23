@@ -2,8 +2,10 @@ using System.Timers;
 
 class Scripture
 {
-    List<Word> _words;
-    Reference _Scripturereference;
+    private List<Word> _words;
+    private Reference _Scripturereference;
+
+    private Random _random = new Random();
 
     public Scripture(string Book_Name, int chapter, int[] verse, string text)
     {
@@ -45,5 +47,26 @@ class Scripture
         {
             word.Display();
         }
+    }
+
+    public void Remove_Three_Words()
+    {
+       for (int i = 0; i < 3; i++)
+       {
+        
+        int random_word_to_hide =_random.Next(_words.Count-1);
+        
+        if (!_words[random_word_to_hide].IsHidden())
+            {
+                _words[random_word_to_hide].Hide();
+            }
+            else
+            {
+                i--;
+            }
+        
+       }
+        
+
     }
 }
