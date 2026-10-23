@@ -54,7 +54,7 @@ class Scripture
        for (int i = 0; i < 3; i++)
        {
         
-        int random_word_to_hide =_random.Next(_words.Count-1);
+        int random_word_to_hide =_random.Next(_words.Count);
         
         if (!_words[random_word_to_hide].IsHidden())
             {
