@@ -22,7 +22,7 @@ class Reference
     {
         if(_Verse.Length == 1)
         {    
-        Console.WriteLine($"{_Book} {_Chapter}:{_Verse[0]}");
+        Console.Write($"{_Book} {_Chapter}:{_Verse[0]}  ");
         }
         else
         {

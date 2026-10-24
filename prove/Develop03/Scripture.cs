@@ -4,7 +4,7 @@ class Scripture
 {
     private List<Word> _words;
     private Reference _Scripturereference;
-
+    private int total_hidden = 0;
     private Random _random = new Random();
 
     public Scripture(string Book_Name, int chapter, int[] verse, string text)
@@ -59,8 +59,16 @@ class Scripture
         if (!_words[random_word_to_hide].IsHidden())
             {
                 _words[random_word_to_hide].Hide();
+                total_hidden++;
+                
+                
             }
-            else
+        else if  (total_hidden == _words.Count)
+            {
+                break;
+            }
+            
+        else
             {
                 i--;
             }

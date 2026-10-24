@@ -15,10 +15,10 @@ class Program
         
         while (user_input != "quit")
         {
-            Console.Clear();
+             Console.Clear();
             myscripture.ShowScripture();
-            Console.WriteLine("Hit enter to hide three words or 'quit' to exit the program.");
-            
+            Console.WriteLine();
+            Console.Write("Hit enter to hide three words or 'quit' to exit the program.");
             user_input = Console.ReadLine();
             if (user_input != "quit")
             {
