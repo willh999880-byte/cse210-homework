@@ -49,6 +49,18 @@ class Scripture
         }
     }
 
+    public bool All_memorized()
+    {
+       if (total_hidden == _words.Count)
+        {
+        return true;    
+        }
+       
+        else
+        {
+            return false;
+        }  
+    }
     public void Remove_Three_Words()
     {
        for (int i = 0; i < 3; i++)
@@ -63,7 +75,7 @@ class Scripture
                 
                 
             }
-        else if  (total_hidden == _words.Count)
+        else if  (All_memorized())
             {
                 break;
             }
@@ -77,4 +89,6 @@ class Scripture
         
 
     }
+
+
 }

@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Quic;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
@@ -15,16 +16,24 @@ class Program
         
         while (user_input != "quit")
         {
-             Console.Clear();
+            Console.Clear();
             myscripture.ShowScripture();
             Console.WriteLine();
             Console.Write("Hit enter to hide three words or 'quit' to exit the program.");
-            user_input = Console.ReadLine();
+            user_input = Console.ReadLine();         
+               if (myscripture.All_memorized())
+                {
+                    user_input = "quit";
+                }
+             
             if (user_input != "quit")
             {
                 
                 myscripture.Remove_Three_Words();
+                
             }
+            
+            
         }
         Console.WriteLine("Thank you for memorizing today!");
 
