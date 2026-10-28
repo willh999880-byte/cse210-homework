@@ -13,6 +13,16 @@ class Program
 
         Console.WriteLine(policeman.GetPoliceInformation());
         Console.WriteLine(doctorman.GetPersonInformation());
+        List<Person> myPeople = new List<Person>();
+
+        myPeople.Add(policeman);
+        myPeople.Add(doctorman);
+        myPeople.Add(myperson);
+        foreach (Person person in myPeople)
+        {
+            Console.WriteLine(person.GetPersonInformation());
+        }
+     
     }
 
 }
