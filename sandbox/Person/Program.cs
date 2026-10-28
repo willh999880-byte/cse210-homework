@@ -6,10 +6,12 @@ class Program
     {
         Person myperson = new Person ("Bob", "Floyd", 56, 238);
 
-        myperson.DisplayInformation();
+        myperson.GetPersonInformation();
 
         Police policeman = new Police("Lance", "Bob", 34, 186, "taser");
-        policeman.DisplayInformation();
+       
+
+        Console.WriteLine(policeman.GetPoliceInformation());
     }
 
 }

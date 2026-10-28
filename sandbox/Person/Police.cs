@@ -9,4 +9,9 @@ class Police : Person
           _weapons = weapons;  
         
     }
+
+    public string GetPoliceInformation()
+      {
+            return ($"Weapons: {_weapons}, {GetPersonInformation()}");
+      }
 }
