@@ -1,6 +1,6 @@
 class Assignment
 {
-    private string _StudentName;
+    protected string _StudentName;
     private string _Topic;
 
 
