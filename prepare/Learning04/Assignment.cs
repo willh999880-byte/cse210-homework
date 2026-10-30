@@ -16,10 +16,19 @@ class Assignment
         _Topic = subject;
     }
 
-    public string GetSummary(string name, string Topic)
+    public string GetStudentName()
+    {
+        return _StudentName;
+    }
+
+    public string GetTopic()
+    {
+        return _Topic;
+    }
+    public string GetSummary()
     {   
     
-        return $"{name} - {Topic}";
+        return $"{_StudentName} - {_Topic}";
     }
 
 }
