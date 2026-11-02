@@ -22,9 +22,11 @@ class Activity
     }
     public void DisplaySpinnerMessage(string message, int seconds)
     {
+        Console.CursorVisible = false;
+        Console.Clear();
         Console.Write($"{message}");
         Console.WriteLine(" ");
-        Console.CursorVisible = false;
+
         for (int i = 0; i < seconds; i++)
         {
             
