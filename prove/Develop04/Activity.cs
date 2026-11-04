@@ -1,6 +1,6 @@
 class Activity
 {
-    //TODO attributes
+    string _name;
 
 
     public Activity()
@@ -24,10 +24,11 @@ class Activity
     {
         Console.CursorVisible = false;
         Console.Clear();
-        Console.Write($"{message}");
-        Console.WriteLine(" ");
+        Console.Write($"{message} ");
+        DateTime endtime = DateTime.Now.AddSeconds(seconds);
 
-        for (int i = 0; i < seconds; i++)
+
+        while (DateTime.Now < endtime)
         {
             
             Console.Write("+");
