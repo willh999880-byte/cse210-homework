@@ -12,22 +12,18 @@ class Activity
 
 
 
-       public Activity()
-    {
-       
-    }
+    
 
        public Activity(string name, string Description)
     {
         _Name = name;
 
         _Description = Description;
-
     }
 
 
 
-public void StartTimer()
+    public void StartTimer()
     {
         _endtime = DateTime.Now.AddSeconds(_Duration);
     }
@@ -41,7 +37,7 @@ public void StartTimer()
     {
         Console.WriteLine($"Welcome to the {_Name}, {_Description}");
         GetDuration();
-
+        StartTimer();
         
     }
 
@@ -87,7 +83,8 @@ public void StartTimer()
 
     public void DisplayWelcome()
     {
-        Console.WriteLine("Welcome to the Mindfulness program.");
+        GetUserName();
+        Console.WriteLine($"Hi {_UserName}\nWelcome to the Mindfulness program.");
         Console.Write("Please choose what activity you would like to do: ");
     }
 
@@ -97,5 +94,12 @@ public void StartTimer()
         _Duration = int.Parse(Console.ReadLine());
         
     }
+
+
+    public void EndActivity()
+    {
+        Console.WriteLine($"Well Done you have now completed the {_Name}.");
+    }
+
 
 }
