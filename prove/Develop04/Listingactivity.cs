@@ -1,9 +1,10 @@
 class ListingActivity : Activity
 {
     List<string> _prompts; 
+
     public ListingActivity() : base("Listing Activity","This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.") 
     {
-    
+        
     }
 
 
@@ -12,9 +13,14 @@ class ListingActivity : Activity
       StartActivity();   
          while (!HasTimerExpired())
         {
-           RunCountDownMessage("Breathe in . . . ", 4);
-            
+           SetPrompts();
+           Random random= new Random();
+           int random_index = random.Next(_prompts.Count); 
+           string random_prompt =_prompts[random_index];
+           Console.WriteLine(random_prompt);
+           Console.Read();
            RunCountDownMessage("Breathe out . . . ", 6);
+           RunCountDownMessage("",6);
        }
       Console.Clear();
       EndActivity();
@@ -24,7 +30,7 @@ class ListingActivity : Activity
     public void SetPrompts()
     {
      
-    List<string> _prompts = new List<string>()
+     _prompts = new List<string>()
     {
       "Who are people that you appreciate?",
       "What are personal strengths of yours?",
