@@ -11,16 +11,24 @@ class ListingActivity : Activity
     public void RunActivity()
     {
       StartActivity();   
+      SetPrompts();
          while (!HasTimerExpired())
         {
-           SetPrompts();
            Random random= new Random();
            int random_index = random.Next(_prompts.Count); 
            string random_prompt =_prompts[random_index];
+           
+           RunCountDownMessage("Get ready...", 5);
            Console.WriteLine(random_prompt);
-           Console.Read();
-           RunCountDownMessage("Breathe out . . . ", 6);
-           RunCountDownMessage("",6);
+           Console.WriteLine("Now enter as many answers to the previous question as you can!");
+            int number_of_answers = 0;
+            while (!HasTimerExpired())
+            {
+                
+                Console.Read();
+                number_of_answers += 1;
+                
+            }
        }
       Console.Clear();
       EndActivity();
