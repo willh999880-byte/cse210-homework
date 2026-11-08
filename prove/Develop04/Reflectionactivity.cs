@@ -15,6 +15,16 @@ class ReflectionActivity : Activity
            Random random= new Random();
            int random_index = random.Next(_prompts.Count); 
            string random_prompt =_prompts[random_index];
+           
+
+            while (!HasTimerExpired())
+            {
+           int random_index_2 = random.Next(_questions.Count); 
+           string random_question =_questions[random_index_2];
+           DisplaySpinnerMessage($"{random_prompt}\n\n{random_question}\n\nReflect on your experience...", 10);
+            }
+        EndActivity();
+
         
     }
 
