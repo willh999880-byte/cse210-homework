@@ -15,6 +15,7 @@ class Program
         Activity activity = new Activity("Breathing Activity", " Get ready to breathe");
         BreathingActivity startbreathing = new BreathingActivity();
         ListingActivity startlisting = new ListingActivity();
+        ReflectionActivity startreflecting = new ReflectionActivity(); 
 
         
 
@@ -31,7 +32,12 @@ class Program
                 
                 startbreathing.RunActivity();
             }
-            else if (Users_choice == 2)
+
+            else if(Users_choice == 2)
+            {
+                startreflecting.RunActivity();
+            }
+            else if (Users_choice == 3)
                 {
                     startlisting.RunActivity();
                 }
