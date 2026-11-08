@@ -24,7 +24,7 @@ class Program
         while(Users_choice != 0)
         {
             
-            //TODO Add menu for activities
+            Console.WriteLine("\n1.Breathing Activity \n2.Reflection Activity \n3.Listing Activity");
             Users_choice = int.Parse(Console.ReadLine());
 
             if(Users_choice == 1)
@@ -41,7 +41,9 @@ class Program
                 {
                     startlisting.RunActivity();
                 }
-                
+            else {
+                Console.WriteLine("Thank you for using the program and stay mindful!");
+            }
             
         }
 

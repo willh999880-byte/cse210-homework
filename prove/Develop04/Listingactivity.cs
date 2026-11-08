@@ -17,7 +17,7 @@ class ListingActivity : Activity
            int random_index = random.Next(_prompts.Count); 
            string random_prompt =_prompts[random_index];
            RunCountDownMessage("Get ready...", 5);
-           RunCountDownMessage($"Get ready...\n\nList as many responses as you can to the following prompt:\n--- {random_prompt} ---\n\nYou may begin in:", 5);
+           RunCountDownMessage($"\nList as many responses as you can to the following prompt:\n {random_prompt}\nYou may begin in:", 5);
           
            Console.WriteLine("");
            Console.WriteLine("Now enter as many answers to the previous question as you can!");
