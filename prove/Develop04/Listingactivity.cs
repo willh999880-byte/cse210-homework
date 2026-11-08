@@ -12,25 +12,25 @@ class ListingActivity : Activity
     {
       StartActivity();   
       SetPrompts();
-         while (!HasTimerExpired())
-        {
+        
            Random random= new Random();
            int random_index = random.Next(_prompts.Count); 
            string random_prompt =_prompts[random_index];
-           
            RunCountDownMessage("Get ready...", 5);
-           Console.WriteLine(random_prompt);
+           RunCountDownMessage($"Get ready...\n\nList as many responses as you can to the following prompt:\n--- {random_prompt} ---\n\nYou may begin in:", 5);
+          
+           Console.WriteLine("");
            Console.WriteLine("Now enter as many answers to the previous question as you can!");
             int number_of_answers = 0;
             while (!HasTimerExpired())
             {
                 
-                Console.Read();
+                Console.ReadLine();
                 number_of_answers += 1;
                 
             }
-       }
       Console.Clear();
+      Console.WriteLine($"You listed {number_of_answers} items!");
       EndActivity();
     }
 
