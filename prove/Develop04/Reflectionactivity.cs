@@ -9,6 +9,12 @@ class ReflectionActivity : Activity
 
     public void RunActivity()
     {
+        StartActivity();   
+        SetPromptsAndQuestions();
+        
+           Random random= new Random();
+           int random_index = random.Next(_prompts.Count); 
+           string random_prompt =_prompts[random_index];
         
     }
 
