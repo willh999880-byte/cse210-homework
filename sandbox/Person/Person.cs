@@ -1,4 +1,4 @@
-class Person
+abstract class Person
 {
     private string _First_Name;
     private string _Last_Name;
@@ -18,6 +18,8 @@ class Person
     {
         return($"{_First_Name} {_Last_Name} is {_age} years old and weighs {_weight} pounds");
     }
+
+    public abstract double GetSalary(); 
 
     
 }

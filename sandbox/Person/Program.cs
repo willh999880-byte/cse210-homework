@@ -19,14 +19,15 @@ class Program
         // {
         //     Console.WriteLine(person.GetPersonInformation());
         // }
+        Console.Write($"Salary: ${person.GetSalary()} ");
         Console.WriteLine(person.GetPersonInformation());
     }
 
     static void Main()
     {
-        Person myperson = new Person ("Bob", "Floyd", 56, 238);
+        //Person myperson = new Person ("Bob", "Floyd", 56, 238);
 
-        myperson.GetPersonInformation();
+        //myperson.GetPersonInformation();
 
         Police policeman = new Police("Lance", "Bob", 34, 186, "taser");
        Doctor doctorman = new Doctor("Billy", "Payne", 20, 150, "Knife");
@@ -37,7 +38,7 @@ class Program
 
         myPeople.Add(policeman);
         myPeople.Add(doctorman);
-        myPeople.Add(myperson);
+        //myPeople.Add(myperson);
         foreach (Person person in myPeople)
         {
             DisplayPersonInformation(person);
