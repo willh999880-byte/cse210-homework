@@ -10,8 +10,8 @@ class Doctor : Person
         
     }
 
-    public string GetDoctorInformation()
+    public override string GetPersonInformation()
       {
-            return ($"Doctor Tools: {_Tools}, {GetPersonInformation()}");
+            return ($"Doctor Tools: {_Tools}, {base.GetPersonInformation()}");
       }
 }

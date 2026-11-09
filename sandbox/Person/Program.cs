@@ -2,6 +2,26 @@
 
 class Program
 {
+
+
+    
+    static void DisplayPersonInformation(Person person)
+    {
+        // if (person is Doctor d)
+        // {
+        //     Console.WriteLine(d.GetDoctorInformation());
+        // }
+        // else if (person is Police p)
+        // {
+        //     Console.WriteLine(p.GetPoliceInformation());
+        // }
+        // else
+        // {
+        //     Console.WriteLine(person.GetPersonInformation());
+        // }
+        Console.WriteLine(person.GetPersonInformation());
+    }
+
     static void Main()
     {
         Person myperson = new Person ("Bob", "Floyd", 56, 238);
@@ -24,22 +44,6 @@ class Program
         //     Console.WriteLine(person.GetPersonInformation());
         }
      
-    }
-
-    static void DisplayPersonInformation(Person person)
-    {
-        if (person is Doctor d)
-        {
-            Console.WriteLine(d.GetDoctorInformation());
-        }
-        else if (person is Police p)
-        {
-            Console.WriteLine(p.GetPoliceInformation());
-        }
-        else
-        {
-            Console.WriteLine(person.GetPersonInformation());
-        }
     }
 
 }
