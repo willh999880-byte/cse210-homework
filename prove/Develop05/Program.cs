@@ -6,5 +6,6 @@ class Program
     {
         BaseGoal goal_name = new BaseGoal(); 
         Console.WriteLine(goal_name.GetConsoleString());
+        
     }
 }
