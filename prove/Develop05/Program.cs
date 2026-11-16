@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        BaseGoal goal_name = new BaseGoal(); 
+        Console.WriteLine(goal_name.GetConsoleString());
     }
 }
