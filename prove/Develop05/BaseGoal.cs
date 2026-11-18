@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 abstract class BaseGoal
 {
 
@@ -53,7 +55,10 @@ abstract class BaseGoal
 
     public virtual string GetConsoleString()
     {
-        return $"[ ] - Goal Name: {_name}, Goal Description: {_description}, points: {_points}";
+        string completestring = " ";
+        if (_completed)
+            completestring = "x";
+        return $"[{completestring}] - Goal Name: {_name}, Goal Description: {_description}, points: {_points}";
         
     }
 
