@@ -8,31 +8,31 @@ class BaseGoal
     private int _Points;
     public BaseGoal()
     {
-         GetGoalName();
-         GetGoalDescription();
-         GetGoalPoints();
+         SetGoalName();
+         SetGoalDescription();
+         SetGoalPoints();
     }
 
-    private void GetGoalName()
+    private void SetGoalName()
     {
         Console.Write("Please enter the name of your goal: ");
         _name = Console.ReadLine();
     }
 
-    private void GetGoalDescription()
+    private void SetGoalDescription()
     {
         Console.Write("Please enter the description of said goal: ");
         _Description = Console.ReadLine();
     }
 
-     private void GetGoalPoints()
+     private void SetGoalPoints()
     {
         Console.Write("Please enter the number of points for said goal: ");
         _Points = int.Parse(Console.ReadLine());
     }
 
 
-    public string GetConsoleString()
+    public virtual string GetConsoleString()
     {
         return $"Goal Name: {_name}, Goal Description: {_Description}, points: {_Points}";
         
