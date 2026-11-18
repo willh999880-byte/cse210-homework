@@ -7,7 +7,7 @@ abstract class BaseGoal
 
     private int _points;
 
-    private bool _status;
+    private bool _completed;
 
     private string _goalType;
 
@@ -17,15 +17,18 @@ abstract class BaseGoal
          _name = name;
          _description = description;
          _points = points;
-         _status = status;
+         _completed = status;
          _goalType = goalType;
 
+
     }
-    public BaseGoal()
+    public BaseGoal(string goalType)
     {
          SetGoalName();
          SetGoalDescription();
          SetGoalPoints();
+         _completed = false;
+         _goalType = goalType;
 
     }
 

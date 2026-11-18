@@ -1,6 +1,6 @@
 class SimpleGoal : BaseGoal
 {
-    public SimpleGoal(): base()
+    public SimpleGoal(): base("simplegoal")
     {
         
     }
