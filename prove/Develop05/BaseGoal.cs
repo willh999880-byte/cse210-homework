@@ -1,16 +1,36 @@
+using System.Collections.Concurrent;
+using System.Net;
+using System.Runtime.CompilerServices;
+
 class BaseGoal
 {
 
     private string _name;
 
-    private string _Description;
+    private string _description;
 
-    private int _Points;
+    private int _points;
+
+    private bool _status;
+
+    private string _goalType;
+
+
+    public BaseGoal(string name, string description, int points, bool status,string goalType )
+    {
+         _name = name;
+         _description = description;
+         _points = points;
+         _status = status;
+         _goalType = goalType;
+
+    }
     public BaseGoal()
     {
          SetGoalName();
          SetGoalDescription();
          SetGoalPoints();
+
     }
 
     private void SetGoalName()
@@ -22,19 +42,19 @@ class BaseGoal
     private void SetGoalDescription()
     {
         Console.Write("Please enter the description of said goal: ");
-        _Description = Console.ReadLine();
+        _description = Console.ReadLine();
     }
 
      private void SetGoalPoints()
     {
         Console.Write("Please enter the number of points for said goal: ");
-        _Points = int.Parse(Console.ReadLine());
+        _points = int.Parse(Console.ReadLine());
     }
 
 
     public virtual string GetConsoleString()
     {
-        return $"Goal Name: {_name}, Goal Description: {_Description}, points: {_Points}";
+        return $"[ ] - Goal Name: {_name}, Goal Description: {_description}, points: {_points}";
         
     }
 
