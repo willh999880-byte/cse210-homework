@@ -62,6 +62,12 @@ abstract class BaseGoal
         
     }
 
+      public int MarkComplete()
+    {
+        _completed = true; 
+        return _points;
+    }
+
     public abstract int RecordEvent();
 
 }

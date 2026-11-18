@@ -15,4 +15,6 @@ class SimpleGoal : BaseGoal
     {
         return 0;
     }
+
+  
 }
