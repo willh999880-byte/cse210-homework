@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 class SimpleGoal : BaseGoal
 {
     public SimpleGoal(): base("simplegoal")
@@ -14,6 +16,13 @@ class SimpleGoal : BaseGoal
     public override int RecordEvent()
     {
         return MarkComplete();
+    }
+
+
+    public override string Getfilestring()
+    {
+        //TODO
+        return "";
     }
 
   

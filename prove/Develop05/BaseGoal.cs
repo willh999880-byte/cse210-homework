@@ -70,4 +70,6 @@ abstract class BaseGoal
 
     public abstract int RecordEvent();
 
+    public abstract string Getfilestring();
+
 }
