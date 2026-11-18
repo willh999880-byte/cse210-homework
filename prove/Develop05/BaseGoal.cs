@@ -1,8 +1,4 @@
-using System.Collections.Concurrent;
-using System.Net;
-using System.Runtime.CompilerServices;
-
-class BaseGoal
+abstract class BaseGoal
 {
 
     private string _name;
@@ -16,7 +12,7 @@ class BaseGoal
     private string _goalType;
 
 
-    public BaseGoal(string name, string description, int points, bool status,string goalType )
+    public BaseGoal(string name, string description, int points, bool status,string goalType)
     {
          _name = name;
          _description = description;
@@ -57,5 +53,7 @@ class BaseGoal
         return $"[ ] - Goal Name: {_name}, Goal Description: {_description}, points: {_points}";
         
     }
+
+    public abstract int RecordEvent();
 
 }
