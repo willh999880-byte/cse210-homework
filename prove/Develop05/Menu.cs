@@ -9,6 +9,7 @@ class Menu
 
     public void RunMenu()
     {
+         Goals creatingnewgoal = new Goals();
         user_input = 0;
         
 
@@ -20,30 +21,29 @@ class Menu
 
              if (user_input == 1)
             {
-                Goals creatingnewgoal = new Goals();
+                
                 creatingnewgoal.CreateGoal();
             }
 
             else if(user_input == 2)
             {
-             Goals displayingallgoals = new Goals();
-             displayingallgoals.DisplayGoals();
+             creatingnewgoal.DisplayGoals();
             }
             else if(user_input == 3)
             {
-                Goals savingallgoals = new Goals();
-                savingallgoals.Savegoals();
+                
+                creatingnewgoal.Savegoals();
             }
 
             else if (user_input == 4)
             {
-                Goals loadingallgoals = new Goals();
-                loadingallgoals.Loadgoals();
+                
+                creatingnewgoal.Loadgoals();
             }
             else if (user_input == 5)
             {
-                Goals recordingevent = new Goals();
-                recordingevent.RecordEvent(); 
+            
+                creatingnewgoal.RecordEvent(); 
             }
 
            

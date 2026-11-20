@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-abstract class BaseGoal
+public abstract class BaseGoal
 {
 
     private string _name;
@@ -13,6 +13,12 @@ abstract class BaseGoal
 
     private string _goalType;
 
+    public bool Completed => _completed;
+    public string Name => _name;
+    public string Description => _description;
+    public int Points => _points;
+
+    public string Goaltype => _goalType;
 
     public BaseGoal(string name, string description, int points, bool status,string goalType)
     {

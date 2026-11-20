@@ -7,7 +7,6 @@ class Goals
 
     public Goals()
     {
-       Getfilename();
        _goals = new List<BaseGoal>();
     
 
@@ -21,6 +20,7 @@ class Goals
 
     public void Savegoals()
     {
+        Getfilename();
         using (StreamWriter outputFile = new StreamWriter(_filename))
         {
         // You can add text to the file with the WriteLine method
@@ -33,7 +33,42 @@ class Goals
 
     public void Loadgoals()
     {
-        //TODO
+        Getfilename();
+         using (StreamReader inputFile = new StreamReader(_filename))
+        {
+            string new_line = inputFile.ReadLine();
+        // You can load text from the file with the ReadLine method
+        while(new_line != null)
+            {
+                
+                string [] parts = new_line.Split("|");
+                new_line = inputFile.ReadLine();
+
+                
+                if (parts[0] == "SimpleGoal")
+                {
+                    SimpleGoal recreategoal = new SimpleGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0]);
+                    _goals.Add(recreategoal);
+                    
+                }
+
+                else if (parts[0] == "EternalGoal")
+                {
+                 //EternalGoal recreategoal = new EternalGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0]);
+                   // _goals.Add(recreategoal);   
+                }
+
+                else if(parts[0] == "ChecklistGoal")
+                
+                {
+                 //ChecklistGoal recreategoal = new ChecklistGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0]);
+                   // _goals.Add(recreategoal);   
+                }
+                
+                
+            }
+        
+        }
     }
 
 
@@ -41,7 +76,8 @@ class Goals
     {
         foreach (BaseGoal Goal in _goals)
         {
-          Console.WriteLine(Goal);   
+          Console.WriteLine(Goal.GetConsoleString());  
+          
         }
     }
 
@@ -61,22 +97,26 @@ class Goals
                 {
                     SimpleGoal mysimplegoal = new SimpleGoal();
                     Console.WriteLine(mysimplegoal.GetConsoleString());
+                    _goals.Add(mysimplegoal);
                 }
                 else if (user_input_2 == 2)
                 {
                     // EternalGoal myeternalgoal = new EternalGoal();
                     // Console.WriteLine(myeternalgoal.GetConsoleString());
+                    // _goals.Add(myeternalgoal);
                 }
 
                 else if (user_input_2 == 3)
                 {
                     // ChecklistGoal mychecklistgoal = new ChecklistGoal();
                     // Console.WriteLine(mychecklistgoal.GetConsoleString());
-                }
+                    // _goals.Add(mychecklistgoal);
+                }   
     }
 
     public void RecordEvent()
     {
         
     }
+
 }

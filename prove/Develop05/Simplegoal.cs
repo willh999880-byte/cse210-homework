@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 class SimpleGoal : BaseGoal
 {
-    public SimpleGoal(): base("simplegoal")
+    public SimpleGoal(): base("Simplegoal")
     {
         
     }
@@ -19,10 +19,14 @@ class SimpleGoal : BaseGoal
     }
 
 
-    public override string Getfilestring()
+    public override string Getfilestring() 
     {
-        //TODO
-        return "";
+        
+        string outputstring = "";
+
+        outputstring = ($"{Goaltype}|{Completed}|{Name}|{Description}|{Points}");
+        return outputstring;
+
     }
 
   
