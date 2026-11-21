@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 class Goals
 {
@@ -124,13 +125,13 @@ class Goals
 
     public void RecordEvent(int goal_number)
     {
-        if(goal_number < 1)
+        if(goal_number < 1 || goal_number > _goals.Count())
         {
-          _goals[goal_number - 1].MarkComplete();   
+          Console.WriteLine("Goal number does not exist");  
         }
         else
         {
-          Console.WriteLine("Goal number does not exist");
+          _goals[goal_number - 1].MarkComplete(); 
         }
         
     }
