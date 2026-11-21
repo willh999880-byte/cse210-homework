@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 class SimpleGoal : BaseGoal
 {
-    public SimpleGoal(): base("Simplegoal")
+    public SimpleGoal(): base("SimpleGoal")
     {
         
     }

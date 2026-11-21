@@ -1,14 +1,15 @@
 public class ChecklistGoal: BaseGoal
 {
 
-    int _DurationOfGoal;
-    int _Times_Completed;
-    int _Bonus;
+    private int _DurationOfGoal;
+    private int _Times_Completed;
+    private int _Bonus;
 
 
-    public ChecklistGoal(): base("Checklistgoal")
+    public ChecklistGoal(): base("ChecklistGoal")
     {
-        
+        SetBonus();
+        SetDuration();
     }
     public ChecklistGoal(string name, string description, int points, bool status,string goalType,int bonus,int timescompleted,int durationofgoal) : base(name,description,points,status,goalType)
     {
@@ -27,6 +28,18 @@ public class ChecklistGoal: BaseGoal
     {
         Console.WriteLine("How often would you like to get bonus points for completion? ");
         _DurationOfGoal = int.Parse(Console.ReadLine());
+        while (_DurationOfGoal < 1)
+        {
+            Console.WriteLine("Invalid input");
+            Console.WriteLine("Please try again.");
+            _DurationOfGoal = int.Parse(Console.ReadLine());
+
+        }
+
+            
+        
+        
+    
     }
 
     public override string Getfilestring()

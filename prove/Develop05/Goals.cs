@@ -34,6 +34,7 @@ class Goals
 
     public void Loadgoals()
     {
+        _goals.Clear();
         Getfilename();
          using (StreamReader inputFile = new StreamReader(_filename))
         {
@@ -125,13 +126,13 @@ class Goals
 
     public void RecordEvent(int goal_number)
     {
-        if(goal_number < 1 || goal_number > _goals.Count())
+        if(goal_number < 1 || goal_number > _goals.Count)
         {
           Console.WriteLine("Goal number does not exist");  
         }
         else
         {
-          _goals[goal_number - 1].MarkComplete(); 
+          _goals[goal_number - 1].RecordEvent(); 
         }
         
     }

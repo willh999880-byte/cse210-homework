@@ -3,7 +3,7 @@ public class EternalGoal : BaseGoal
 
     private int times_completed; 
 
-    public EternalGoal() : base("Eternalgoal")
+    public EternalGoal() : base("EternalGoal")
     {
         
     }
