@@ -68,9 +68,10 @@ public abstract class BaseGoal
         
     }
 
-      public int MarkComplete()
+      public virtual int MarkComplete()
     {
         _completed = true; 
+        
         return _points;
     }
 

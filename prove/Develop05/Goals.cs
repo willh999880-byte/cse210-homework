@@ -55,7 +55,7 @@ class Goals
 
                 else if (parts[0] == "EternalGoal")
                 {
-                   EternalGoal recreategoal = new EternalGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0]);
+                   EternalGoal recreategoal = new EternalGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0],int.Parse(parts[5]));
                    _goals.Add(recreategoal);   
                 }
 
@@ -66,7 +66,7 @@ class Goals
                    // _goals.Add(recreategoal);   
                 }
                 
-                
+             
             }
         
         }
@@ -110,9 +110,9 @@ class Goals
                 }
                 else if (user_input_2 == 2)
                 {
-                    // EternalGoal myeternalgoal = new EternalGoal();
-                    // Console.WriteLine(myeternalgoal.GetConsoleString());
-                    // _goals.Add(myeternalgoal);
+                    EternalGoal myeternalgoal = new EternalGoal();
+                    Console.WriteLine(myeternalgoal.GetConsoleString());
+                    _goals.Add(myeternalgoal);
                 }
 
                 else if (user_input_2 == 3)
