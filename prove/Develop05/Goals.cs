@@ -62,8 +62,8 @@ class Goals
                 else if(parts[0] == "ChecklistGoal")
                 
                 {
-                 //ChecklistGoal recreategoal = new ChecklistGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0]);
-                   // _goals.Add(recreategoal);   
+                   ChecklistGoal recreategoal = new ChecklistGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0],int.Parse(parts[5]),int.Parse(parts[6]),int.Parse(parts[7]));
+                   _goals.Add(recreategoal);   
                 }
                 
              
@@ -117,9 +117,9 @@ class Goals
 
                 else if (user_input_2 == 3)
                 {
-                    // ChecklistGoal mychecklistgoal = new ChecklistGoal();
-                    // Console.WriteLine(mychecklistgoal.GetConsoleString());
-                    // _goals.Add(mychecklistgoal);
+                    ChecklistGoal mychecklistgoal = new ChecklistGoal();
+                    Console.WriteLine(mychecklistgoal.GetConsoleString());
+                    _goals.Add(mychecklistgoal);
                 }   
     }
 
