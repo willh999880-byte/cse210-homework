@@ -54,8 +54,8 @@ class Goals
 
                 else if (parts[0] == "EternalGoal")
                 {
-                 //EternalGoal recreategoal = new EternalGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0]);
-                   // _goals.Add(recreategoal);   
+                   EternalGoal recreategoal = new EternalGoal(parts[2],parts[3],int.Parse(parts[4]),bool.Parse(parts[1]),parts[0]);
+                   _goals.Add(recreategoal);   
                 }
 
                 else if(parts[0] == "ChecklistGoal")
@@ -74,23 +74,24 @@ class Goals
 
     public void DisplayGoals()
     {
+        int goal_number = 1;
         foreach (BaseGoal Goal in _goals)
         {
-          Console.WriteLine(Goal.GetConsoleString());  
-          
+          Console.WriteLine($"{goal_number}. {Goal.GetConsoleString()}");  
+          goal_number +=1;
         }
     }
 
     public void DisplayPoints()
     {
-        int Total_points = 0;
+        int Totalpoints = 0;
 
         foreach(BaseGoal goal in _goals)
         {
-            Total_points += goal.Getpoints();
+            Totalpoints += goal.Getpoints();
             
         }
-        Console.WriteLine($"You have {Total_points} total points!");
+        Console.WriteLine($"You have {Totalpoints} total points!");
     }
 
     public void CreateGoal()
@@ -123,7 +124,11 @@ class Goals
 
     public void RecordEvent()
     {
-        _goals[0].MarkComplete();
+        foreach(BaseGoal goal in _goals)
+        {
+            goal.MarkComplete();
+        }
+        
     }
 
 }

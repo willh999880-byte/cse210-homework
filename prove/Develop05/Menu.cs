@@ -44,6 +44,11 @@ class Menu
             }
             else if (user_input == 5)
             {
+                int user_input_3 = 0;
+
+                Console.WriteLine("Which Goal would you like to mark as completed?");
+                creatingnewgoal.DisplayGoals();
+                user_input_3 = int.Parse(Console.ReadLine());
             
                 creatingnewgoal.RecordEvent(); 
             }
