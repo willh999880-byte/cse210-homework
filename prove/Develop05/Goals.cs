@@ -76,7 +76,7 @@ class Goals
     {
         foreach (BaseGoal Goal in _goals)
         {
-          Console.WriteLine($"You have {Goal.GetConsoleString()} total points!");  
+          Console.WriteLine(Goal.GetConsoleString());  
           
         }
     }
@@ -90,7 +90,7 @@ class Goals
             Total_points += goal.Getpoints();
             
         }
-        Console.WriteLine(Total_points);
+        Console.WriteLine($"You have {Total_points} total points!");
     }
 
     public void CreateGoal()
