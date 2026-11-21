@@ -49,8 +49,10 @@ class Menu
                 Console.WriteLine("Which Goal would you like to mark as completed?");
                 creatingnewgoal.DisplayGoals();
                 user_input_3 = int.Parse(Console.ReadLine());
+                
+                creatingnewgoal.RecordEvent(user_input_3); 
             
-                creatingnewgoal.RecordEvent(); 
+                
             }
 
            

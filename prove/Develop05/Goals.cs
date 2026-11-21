@@ -122,11 +122,15 @@ class Goals
                 }   
     }
 
-    public void RecordEvent()
+    public void RecordEvent(int goal_number)
     {
-        foreach(BaseGoal goal in _goals)
+        if(goal_number < 1)
         {
-            goal.MarkComplete();
+          _goals[goal_number - 1].MarkComplete();   
+        }
+        else
+        {
+          Console.WriteLine("Goal number does not exist");
         }
         
     }
