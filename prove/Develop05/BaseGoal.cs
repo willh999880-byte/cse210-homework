@@ -74,6 +74,7 @@ public abstract class BaseGoal
         return _points;
     }
 
+    public abstract int Getpoints();
     public abstract int RecordEvent();
 
     public abstract string Getfilestring();

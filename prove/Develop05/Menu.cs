@@ -28,6 +28,7 @@ class Menu
             else if(user_input == 2)
             {
              creatingnewgoal.DisplayGoals();
+             creatingnewgoal.DisplayPoints();
             }
             else if(user_input == 3)
             {
@@ -39,6 +40,7 @@ class Menu
             {
                 
                 creatingnewgoal.Loadgoals();
+                
             }
             else if (user_input == 5)
             {

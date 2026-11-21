@@ -76,14 +76,21 @@ class Goals
     {
         foreach (BaseGoal Goal in _goals)
         {
-          Console.WriteLine(Goal.GetConsoleString());  
+          Console.WriteLine($"You have {Goal.GetConsoleString()} total points!");  
           
         }
     }
 
     public void DisplayPoints()
     {
-        //TODO
+        int Total_points = 0;
+
+        foreach(BaseGoal goal in _goals)
+        {
+            Total_points += goal.Getpoints();
+            
+        }
+        Console.WriteLine(Total_points);
     }
 
     public void CreateGoal()
@@ -116,7 +123,7 @@ class Goals
 
     public void RecordEvent()
     {
-        
+        _goals[0].MarkComplete();
     }
 
 }

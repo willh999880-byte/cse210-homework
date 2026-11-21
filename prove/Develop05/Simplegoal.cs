@@ -29,5 +29,19 @@ class SimpleGoal : BaseGoal
 
     }
 
+    public override int Getpoints()
+    {
+        if (Completed)
+        {
+          return Points;    
+        }
+        else
+        {
+        return 0; 
+        }
+
+        
+    }
+
   
 }
